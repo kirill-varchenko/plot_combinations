@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "plot-combinations"
+version = "0.1.0"
+description = ""
+authors = ["Kirill Varchenko <kirill.varchenko@gmail.com>"]
+readme = "README.md"
+packages = [{include = "plot_combinations"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+tqdm = "^4.66.1"
+click = "^8.1.7"
+matplotlib = "^3.8.2"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.2.0"
+
+[tool.poetry.scripts]
+plot_combinations = 'plot_combinations.cli:run'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff.lint]
+# Enable the isort rules.
+extend-select = ["I"]
